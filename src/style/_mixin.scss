@@ -1,0 +1,12 @@
+@mixin d-flex($jcc:center,$aic:center) {
+  display: flex;
+  justify-content: $jcc;
+  align-items: $aic;
+}
+
+@mixin position-absolute($top:50%,$left:50%,$x:-50%,$y:-50%){
+  position: absolute;
+  top:$top;
+  left:$left;
+  transform: translate($x,$y);
+}

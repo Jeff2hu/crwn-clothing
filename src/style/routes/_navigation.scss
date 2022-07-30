@@ -1,0 +1,20 @@
+.navigation{
+  height: 70px;
+  width: 100%;
+  @include d-flex(space-between);
+  margin-bottom: 25px;
+  &-logo{
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+  &-links{
+    width: 50%;
+    height: 100%;
+    @include d-flex(flex-end);
+    &__link{
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}
