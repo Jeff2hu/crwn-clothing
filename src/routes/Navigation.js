@@ -7,14 +7,14 @@ const Navigation = () => {
   return (
     <Fragment>
       <div className='navigation'>
-        <Link className='navigation-logo' to='/'>
+        <Link className='navigation-logo' to='/crwn-clothing'>
           <CrwnLogo className='navigation-logo__logo'/>
         </Link>
         <div className='navigation-links'>
-          <Link className='navigation-links__link' to='/shop'>
+          <Link className='navigation-links__link' to='crwn-clothing/shop'>
             <div>Shop</div>
           </Link>
-          <Link className='navigation-links__link' to='/auth'>
+          <Link className='navigation-links__link' to='crwn-clothing/auth'>
             <div>SignIn</div>
           </Link>
         </div>
