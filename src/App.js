@@ -18,8 +18,8 @@ function App() {
     <Routes>
       <Route path="crwn-clothing" element={<Navigation />}  >
         <Route index element={<Home />} />
-        <Route path="crwn-clothing/shop" element={<Shop />} />
-        <Route path="crwn-clothing/auth" element={<Authentication />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="auth" element={<Authentication />} />
       </Route> 
     </Routes>
   );
