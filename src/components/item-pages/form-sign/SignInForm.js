@@ -1,11 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 
 import FormInput from '../../item-components/FormInput';
 import Button from '../../item-components/Button';
+import { UserContext } from '../../../contexts/user/UserContext';
 
 import { signInAuthWithEmailAndPassword,signInWithGooglePopup,createUserDocumentFromAuth } from '../../../utils/Firebase';
 
 const SignInForm = () => {
+
+  const {setCurrentUser} = useContext(UserContext);
 
   const initSignIn = {
     email:"",
@@ -26,7 +29,7 @@ const SignInForm = () => {
   const logGoogleUser = async() => {
     const {user} = await signInWithGooglePopup();
     const userDocRef = await createUserDocumentFromAuth(user);
-    console.log(userDocRef)
+    setCurrentUser(userDocRef)
     alert("Welcome !!!");
   }
 
@@ -34,8 +37,9 @@ const SignInForm = () => {
     e.preventDefault();
 
     try {
-      const response = await signInAuthWithEmailAndPassword(email,password);
-      console.log(response)
+      const {user} = await signInAuthWithEmailAndPassword(email,password);
+      console.log(user)
+      setCurrentUser(user)
       alert("Welcome !!!");
       setSignInInput(initSignIn)
     }catch(error){
@@ -56,7 +60,6 @@ const SignInForm = () => {
     <form className='form-signIn' onSubmit={submitHandler}>
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
-      
       <FormInput 
         label={"Email"}
         inputOptions={{
@@ -67,7 +70,6 @@ const SignInForm = () => {
           required:true
         }}
       />
-
       <FormInput 
         label={"Password"}
         inputOptions={{
@@ -80,7 +82,6 @@ const SignInForm = () => {
       />
 
       <div className="form-signIn__btns">
-
         <Button
           buttonType={""}
           buttonOptions={{
@@ -89,7 +90,6 @@ const SignInForm = () => {
         >
           sign in
         </Button>
-
         <Button
           buttonType={"google"}
           buttonOptions={{

@@ -13,6 +13,12 @@ function Shop(){
   )
 }
 
+function Profile(){
+  return (
+    <h2>I am the Profile page</h2>
+  )
+}
+
 function App() {
   return (
     <Routes>
@@ -20,6 +26,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
+        <Route path="profile" element={<Profile />} />
       </Route> 
     </Routes>
   );

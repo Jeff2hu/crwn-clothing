@@ -61,7 +61,6 @@ const SignUpForm = () => {
       <h2>Don't have an account?</h2>
       <span>Sign up with your mail and password</span>
       <form onSubmit={submitHandler}>
-
         <FormInput
           label={"Display Name"}
           inputOptions={{
@@ -71,7 +70,6 @@ const SignUpForm = () => {
             value:displayName,
             required:true
           }}/>
-
         <FormInput 
           label={"Email"}
           inputOptions={{
@@ -81,7 +79,6 @@ const SignUpForm = () => {
             value:email,
             required:true
           }}/>
-
         <FormInput
           label={"Password"}
           inputOptions={{
@@ -91,7 +88,6 @@ const SignUpForm = () => {
             value:password,
             required:true
           }}/>
-
         <FormInput
           label={"Confirm Password"}
           inputOptions={{
@@ -101,15 +97,13 @@ const SignUpForm = () => {
             value:confirmPassword,
             required:true
           }}/>
-
         <Button
           buttonType={""}
           buttonOptions={{
             type:"submit"
           }}>
-          Submit
+          sign up
         </Button>
-      
       </form>
     </div>
   )
