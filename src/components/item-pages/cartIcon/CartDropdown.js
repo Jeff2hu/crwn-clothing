@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import Button from '../../item-components/Button';
 
 const CartDropdown = () => {
   return (
-    <div></div>
+    <div className='cartDropdown'>
+      <div className="cartDropdown-items"></div>
+      <Button buttonType={"inverted"}>Go To Checkout</Button>
+    </div>
   )
 }
 
