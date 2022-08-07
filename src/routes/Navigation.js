@@ -1,6 +1,8 @@
 import React, { Fragment,useContext } from 'react';
 import { Outlet , Link } from 'react-router-dom';
 
+import CartIcon from '../components/item-pages/cartIcon/CartIcon';
+
 import { ReactComponent as CrwnLogo } from '../assests/crown.svg';
 import { signOutAuth } from '../utils/Firebase';
 
@@ -8,12 +10,8 @@ import { UserContext } from '../contexts/user/UserContext';
 
 const Navigation = () => {
 
-  const {currentUser,setCurrentUser} = useContext(UserContext);
+  const {currentUser} = useContext(UserContext);
 
-  const signOutHandler = async() => {
-    await signOutAuth();
-    setCurrentUser(null)
-  }
 
   return (
     <Fragment>
@@ -37,10 +35,13 @@ const Navigation = () => {
                 <Link 
                 className='navigation-links__link' 
                 to='/crwn-clothing/auth'
-                onClick={signOutHandler}
+                onClick={signOutAuth}
                 >
                 <span>Sign Out</span>
                 </Link>
+                <a className='navigation-links__link'>
+                  <CartIcon />
+                </a>
               </Fragment>
             ) 
             :(<Link className='navigation-links__link' to='/crwn-clothing/auth'>

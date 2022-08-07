@@ -1,5 +1,5 @@
 import React from 'react';
-import Directory from '../components/item-pages/directory/Directory';
+import Category from '../components/item-pages/category/Category';
 
 const category = [
   {
@@ -29,10 +29,14 @@ const category = [
   },
 ]
 
-const Home = () => {
+const Categories = () => {
   return (
-    <Directory category={category}/>
+    <div className='categories'>
+    {category.map((category)=>{
+      return <Category key={category.id} category={category}/>
+    })}
+  </div>
   );
 }
 
-export default Home
+export default Categories

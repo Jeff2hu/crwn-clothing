@@ -13,8 +13,19 @@
     height: 100%;
     @include d-flex(flex-end);
     &__link{
-      padding: 10px 15px;
+      margin: 10px;
+      padding: 10px;
+      color: black;
       cursor: pointer;
+      &:hover{
+        background-color: #333;
+        color:white;
+        border-radius: 30px;
+      }
+      &:hover:nth-child(4){
+        color:black;
+        background-color: #aaa;
+      }
     }
   }
 }

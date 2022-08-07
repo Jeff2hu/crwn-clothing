@@ -5,10 +5,10 @@ const Category = ({category}) => {
   return (
     <div className='category-container'>
       <div 
-        className="category-container__image" 
+        className="category-image" 
         style={{backgroundImage:`url(${imageUrl})`}}
         />
-      <div className="category-container__body">
+      <div className="category-body">
         <h2>{title}</h2>
         <p>Shop Now!</p>
       </div>

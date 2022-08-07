@@ -1,14 +1,11 @@
-import React,{useState,useContext} from 'react'
+import React,{useState} from 'react'
 
 import FormInput from '../../item-components/FormInput';
 import Button from '../../item-components/Button';
-import { UserContext } from '../../../contexts/user/UserContext';
 
-import { signInAuthWithEmailAndPassword,signInWithGooglePopup,createUserDocumentFromAuth } from '../../../utils/Firebase';
+import { signInAuthWithEmailAndPassword,signInWithGooglePopup } from '../../../utils/Firebase';
 
 const SignInForm = () => {
-
-  const {setCurrentUser} = useContext(UserContext);
 
   const initSignIn = {
     email:"",
@@ -27,9 +24,7 @@ const SignInForm = () => {
   }
 
   const logGoogleUser = async() => {
-    const {user} = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
-    setCurrentUser(userDocRef)
+    await signInWithGooglePopup();
     alert("Welcome !!!");
   }
 
@@ -37,9 +32,7 @@ const SignInForm = () => {
     e.preventDefault();
 
     try {
-      const {user} = await signInAuthWithEmailAndPassword(email,password);
-      console.log(user)
-      setCurrentUser(user)
+      await signInAuthWithEmailAndPassword(email,password);
       alert("Welcome !!!");
       setSignInInput(initSignIn)
     }catch(error){

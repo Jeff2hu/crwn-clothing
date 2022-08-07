@@ -1,17 +1,12 @@
 import React from 'react';
 import { Routes , Route } from "react-router-dom";
 
-import Home from './routes/Home';
+import Categories from './routes/Categories';
 import Authentication from './routes/Authentication';
 import Navigation from './routes/Navigation';
+import Shop from './routes/Shop';
 
 import './style/all.css';
-
-function Shop(){
-  return (
-    <h2>I am the shop page</h2>
-  )
-}
 
 function Profile(){
   return (
@@ -23,7 +18,7 @@ function App() {
   return (
     <Routes>
       <Route path="crwn-clothing/" element={<Navigation />}  >
-        <Route index element={<Home />} />
+        <Route index element={<Categories />} />
         <Route path="shop" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
         <Route path="profile" element={<Profile />} />

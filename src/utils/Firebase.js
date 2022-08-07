@@ -6,7 +6,8 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  onAuthStateChanged
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -40,17 +41,12 @@ export const signInWithGooglePopup = () => signInWithPopup(auth,googleProvider);
 export const db = getFirestore(); 
 export const createUserDocumentFromAuth = async(userAuth,extendInformation) => {
   
-  if(!userAuth) return;
+  if(!userAuth) return; // userAuth 是還放在驗證區的帳號
+  const userDocRef = doc(db,"users",userAuth.uid); // userDocRef 是要把驗證裡面的帳號用uid這個唯一的id放去users這個collection裡面
 
-  console.log(userAuth); // userAuth 是還放在驗證區的帳號
-  const userDocRef = doc(db,"users",userAuth.uid);
-  console.log(userDocRef); // userDocRef 是要把驗證裡面的帳號用uid這個唯一的id放去users這個collection裡面
+  const userSnapShot = await getDoc(userDocRef); // 抓取Doc裡面這個id 
 
-  const userSnapShot = await getDoc(userDocRef); // 抓取Doc裡面這個id
-  console.log(userSnapShot);
-  console.log(userSnapShot.exists()); // 辨識是否存在
-
-  if(!userSnapShot.exists()){
+  if(!userSnapShot.exists()){ // 辨識是否存在
     const { displayName , email } = userAuth 
     const createTime = new Date();
 
@@ -84,3 +80,5 @@ export const signInAuthWithEmailAndPassword = async(email,password) => {
 }
 
 export const signOutAuth = async() => signOut(auth);
+
+export const onAuthStateChangedListner = (callback) => onAuthStateChanged(auth,callback)
