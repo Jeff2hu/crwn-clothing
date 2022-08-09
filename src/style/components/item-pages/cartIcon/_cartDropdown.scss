@@ -1,5 +1,5 @@
 .cartDropdown{
-  width: 240px;
+  width: 260px;
   height: 340px;
   display: flex;
   flex-direction: column;
@@ -9,10 +9,10 @@
   @include position-absolute(90px,85%,-50%,0);
   z-index: 5;
 
-  // .empty-message {
-  //   font-size: 18px;
-  //   margin: 50px auto;
-  // }
+  .empty-message {
+    font-size: 18px;
+    margin: 50% auto;
+  }
 
   .cartDropdown-items {
     height: 240px;

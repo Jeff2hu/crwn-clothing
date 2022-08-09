@@ -8,7 +8,7 @@ import { ReactComponent as CrwnLogo } from '../assests/crown.svg';
 import { signOutAuth } from '../utils/Firebase';
 
 import { UserContext } from '../contexts/user/UserContext';
-import { CartContext } from '../contexts/cart/cartContext';
+import { CartContext } from '../contexts/cart/CartContext';
 
 const Navigation = () => {
 
