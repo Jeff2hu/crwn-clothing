@@ -43,9 +43,12 @@ const Navigation = () => {
                 </Link>
               </Fragment>
             ) 
-            :(<Link className='navigation-links__link' to='/crwn-clothing/auth'>
-              <span>Sign In</span>
-              </Link>
+            :(<Fragment>
+                <a></a>
+                <Link className='navigation-links__link' to='/crwn-clothing/auth'>
+                <span>Sign In</span>
+                </Link>
+              </Fragment>
             )
           }
           <a className='navigation-links__link'>

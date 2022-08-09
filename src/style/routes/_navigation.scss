@@ -16,6 +16,7 @@
       margin: 10px;
       padding: 10px;
       color: black;
+      transition: all .2s ease-in;
       cursor: pointer;
       &:hover{
         background-color: #333;
@@ -24,10 +25,7 @@
       }
       &:hover:nth-child(4){
         color:black;
-        background-color: #aaa;
-        .cartIcon{
-          color:white;
-        }
+        background-color: #ccc;
       }
     }
   }

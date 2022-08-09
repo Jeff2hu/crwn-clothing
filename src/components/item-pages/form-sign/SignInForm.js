@@ -93,6 +93,8 @@ const SignInForm = () => {
           sign in with google
         </Button>
       </div>
+
+      <p style={{marginTop:"50px",lineHeight:"30px",color:"red",fontWeight:"600"}}>You can just use the demo account<br/>Email : 123123@gmail.com<br/>Password : 123123</p>
     </form>
   )
 }

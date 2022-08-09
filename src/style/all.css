@@ -90,6 +90,7 @@ body {
   margin: 10px;
   padding: 10px;
   color: black;
+  transition: all 0.2s ease-in;
   cursor: pointer;
 }
 .navigation-links__link:hover {
@@ -99,10 +100,7 @@ body {
 }
 .navigation-links__link:hover:nth-child(4) {
   color: black;
-  background-color: #aaa;
-}
-.navigation-links__link:hover:nth-child(4) .cartIcon {
-  color: white;
+  background-color: #ccc;
 }
 
 .categories {
@@ -226,6 +224,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 5px;
+  transition: all 0.2s ease-in;
 }
 .product-container button {
   width: 80%;
@@ -394,6 +393,7 @@ body {
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
+  transition: all 0.25s ease-in;
   cursor: pointer;
   display: flex;
   justify-content: center;
