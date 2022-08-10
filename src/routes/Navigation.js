@@ -25,6 +25,9 @@ const Navigation = () => {
           <Link className='navigation-links__link' to='/crwn-clothing/shop'>
             <div>Shop</div>
           </Link>
+          <Link className='navigation-links__link' to='/crwn-clothing/checkout'>
+            <span>Checkout</span>
+          </Link>
           {
             currentUser 
             ?(<Fragment>

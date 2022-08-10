@@ -1,0 +1,13 @@
+.checkout{
+  margin: 50px 150px;
+  
+  &-title{
+    @include d-flex(space-between);
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+    
+    :nth-child(1){
+      width: 210px;
+    }
+  }
+}

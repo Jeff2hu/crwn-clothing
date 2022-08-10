@@ -1,0 +1,13 @@
+.checkoutItem-container{
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 30px 30px 30px 0;
+
+  &__details{
+    @include d-flex(space-between);
+
+    img{
+      width: 180px;
+    }
+  }
+}

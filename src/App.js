@@ -5,6 +5,7 @@ import Categories from './routes/Categories';
 import Authentication from './routes/Authentication';
 import Navigation from './routes/Navigation';
 import Shop from './routes/Shop';
+import Checkout from './routes/Checkout';
 
 import './style/all.css';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="shop" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="checkout" element={<Checkout />} />
       </Route> 
     </Routes>
   );

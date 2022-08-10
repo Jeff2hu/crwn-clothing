@@ -1,4 +1,4 @@
-import { createContext,useState } from "react";
+import { createContext,useState,useEffect } from "react";
 
 const checkProductRepeat = (cartItems,productsToAdd) => {
   // 辨識購物車清單裡是否已經有一樣的物品
@@ -26,19 +26,25 @@ export const CartContext = createContext({
   isCartOpen: false,
   setIsCartOpen: () => {},
   cartItems: [],
-  addItemToCart: () => {}
+  addItemToCart: () => {},
+  cartCount:0
 }) 
 
 export const CartProvider = ({children}) => {
 
   const [ isCartOpen,setIsCartOpen ] = useState(false);
   const [ cartItems,setCartItems ] = useState([]);
+  const [ cartCount,setCartCount ] = useState(0);
+
+  useEffect(()=>{
+    setCartCount(cartItems.reduce((total,cartItem)=>total+cartItem.quantity,0))
+  },[cartItems])
 
   const addItemToCart = (productsToAdd) => {
     setCartItems(checkProductRepeat(cartItems,productsToAdd))
   }
 
-  const value = { isCartOpen,setIsCartOpen,cartItems,addItemToCart }
+  const value = { isCartOpen,setIsCartOpen,cartItems,addItemToCart,cartCount }
 
   return(
     <CartContext.Provider value={value}>
