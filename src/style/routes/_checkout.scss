@@ -1,13 +1,31 @@
 .checkout{
-  margin: 50px 150px;
-  
+  width: 55%;
+  min-height: 90vh;
+  @include d-flex;
+  flex-direction: column;
+  margin: 50px auto 0;
+
   &-title{
+    width: 100%;
+    padding: 10px 0;
     @include d-flex(space-between);
-    padding-bottom: 30px;
-    border-bottom: 1px solid black;
-    
-    :nth-child(1){
-      width: 210px;
+    border-bottom: 1px solid darkgrey;
+
+    &__block{
+      text-transform: capitalize;
+      width: 21%;
+      &:nth-child(1){
+        width: 30%;
+      }
+      &:last-child{
+        width: 9%;
+      }
     }
+  }
+
+  &-total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 24px;
   }
 }
