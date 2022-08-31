@@ -1,5 +1,12 @@
-# Welcome To My GitHub !!!
+# Welcome To Crwn-Clothing !!!
+[GitHub Pages](https://jeff2hu.github.io/crwn-clothing/)
 
-這次的作品是使了FireBase / React 來完成一個仿電商的網站
-目前進度仍然在進行中 , 請拭目以待 !!!
+## Crwn-Clothing - 資訊
+
+1. 使用 React 框架來完成
+2. 
+3. 
+4. 
+5. 
+6. 
 
