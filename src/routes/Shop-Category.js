@@ -9,13 +9,22 @@ const Shop_Category = () => {
   const { categoriesMap } = useContext(CategoryContext);
   const [ products,setProducts ] = useState();
   
+  let newTitle = ""
+  if(category==="womens"){
+    newTitle = "women"
+  }else if(category==="mens"){
+    newTitle = "men"
+  }else{
+    newTitle=category
+  }
+
   useEffect(()=>{
     setProducts(categoriesMap[category])
   },[category,categoriesMap])
 
   return (
     <Fragment>
-      <h2 style={{fontSize:"36px",textAlign:"center"}}>{category.toUpperCase()}</h2>
+      <h2 style={{fontSize:"36px",textAlign:"center"}}>{newTitle.toUpperCase()}</h2>
       <div className='shop-category-container'>
         {
           products && products.map((product)=>{
