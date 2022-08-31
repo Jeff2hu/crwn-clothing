@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Category = ({category}) => {
   const { title , imageUrl } = category;
   return (
-    <div className='category-container'>
+    <Link 
+      className='category-container'
+      to={`shop/${title.toLowerCase()}`}
+    >
       <div 
         className="category-image" 
         style={{backgroundImage:`url(${imageUrl})`}}
@@ -12,7 +16,7 @@ const Category = ({category}) => {
         <h2>{title}</h2>
         <p>Shop Now!</p>
       </div>
-    </div>
+    </Link>
   )
 }
 
