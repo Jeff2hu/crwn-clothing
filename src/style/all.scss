@@ -4,12 +4,14 @@
 @import './routes/navigation.scss';
 @import './routes/categories.scss';
 @import './routes/shop.scss';
+@import './routes/shop-category.scss';
 @import './routes/authentication.scss';
 @import './routes/checkout.scss';
 
 @import './components/item-pages/form-sign/formSignUp.scss';
 @import './components/item-pages/form-sign/formSignIn.scss';
 @import './components/item-pages/category/category.scss';
+@import './components/item-pages/category-preview/category-preview.scss';
 @import './components/item-pages/product/product.scss';
 @import './components/item-pages/cartIcon/cartIcon.scss';
 @import './components/item-pages/cartIcon/cartDropdown.scss';

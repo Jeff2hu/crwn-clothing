@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path="crwn-clothing/" element={<Navigation />}  >
         <Route index element={<Categories />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<Shop />} />
         <Route path="auth" element={<Authentication />} />
         <Route path="profile" element={<Profile />} />
         <Route path="checkout" element={<Checkout />} />
