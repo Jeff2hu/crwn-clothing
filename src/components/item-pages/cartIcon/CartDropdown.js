@@ -11,7 +11,7 @@ const CartDropdown = () => {
   const { cartItems } = useContext(CartContext)
   const navigate = useNavigate()
   const goToCheckoutHandler = () => {
-    navigate('/crwn-clothing/checkout')
+    navigate('/checkout')
   }
 
   return (

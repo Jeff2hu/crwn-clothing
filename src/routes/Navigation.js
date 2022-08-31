@@ -18,14 +18,14 @@ const Navigation = () => {
   return (
     <Fragment>
       <div className='navigation'>
-        <Link className='navigation-logo' to='/crwn-clothing/'>
+        <Link className='navigation-logo' to='/'>
           <CrwnLogo className='navigation-logo__logo'/>
         </Link>
         <div className='navigation-links'>
-          <Link className='navigation-links__link' to='/crwn-clothing/shop'>
+          <Link className='navigation-links__link' to='/shop'>
             <div>Shop</div>
           </Link>
-          <Link className='navigation-links__link' to='/crwn-clothing/checkout'>
+          <Link className='navigation-links__link' to='/checkout'>
             <span>Checkout</span>
           </Link>
           {
@@ -33,13 +33,13 @@ const Navigation = () => {
             ?(<Fragment>
                 <Link 
                   className='navigation-links__link' 
-                  to='/crwn-clothing/profile'
+                  to='/profile'
                 >
                   <span>Profile</span>
                 </Link>
                 <Link 
                 className='navigation-links__link' 
-                to='/crwn-clothing/auth'
+                to='/auth'
                 onClick={signOutAuth}
                 >
                 <span>Sign Out</span>
@@ -48,7 +48,7 @@ const Navigation = () => {
             ) 
             :(<Fragment>
                 <a></a>
-                <Link className='navigation-links__link' to='/crwn-clothing/auth'>
+                <Link className='navigation-links__link' to='/auth'>
                 <span>Sign In</span>
                 </Link>
               </Fragment>
