@@ -1,9 +1,10 @@
 import React , {useState} from 'react'
 
-import FormInput from '../../item-components/FormInput';
-import Button from '../../item-components/Button';
+import FormInput from '../../../item-components/formInput/FormInput';
+import Button,{ button_class_type } from '../../../item-components/button/Button';
+import { Container } from './SignUpForm.style';
 
-import { createAuthUserWithEmailAndPassword , createUserDocumentFromAuth } from '../../../utils/Firebase';
+import { createAuthUserWithEmailAndPassword , createUserDocumentFromAuth } from '../../../../utils/Firebase';
 
 const initSignUp = {
   displayName:"",
@@ -57,8 +58,8 @@ const SignUpForm = () => {
   }
 
   return (
-    <div className='form-signUp'>
-      <h2>Don't have an account?</h2>
+    <Container>
+      <h2>Don't have account?</h2>
       <span>Sign up with your mail and password</span>
       <form onSubmit={submitHandler}>
         <FormInput
@@ -98,14 +99,14 @@ const SignUpForm = () => {
             required:true
           }}/>
         <Button
-          buttonType={""}
+          buttonType={button_class_type.base}
           buttonOptions={{
             type:"submit"
           }}>
           sign up
         </Button>
       </form>
-    </div>
+    </Container>
   )
 }
 

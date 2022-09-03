@@ -1,15 +1,16 @@
 import React from "react";
+import { Container } from './Authentication.style';
 
-import SignInForm from "../components/item-pages/form-sign/SignInForm";
-import SignUpForm from "../components/item-pages/form-sign/SignUpForm";
+import SignInForm from "../../components/item-pages/form-sign/signIn/SignInForm";
+import SignUpForm from "../../components/item-pages/form-sign/signUp/SignUpForm";
 
 const Authentication = () => {
 
   return (
-    <div className="authentication">
+    <Container>
       <SignInForm />
       <SignUpForm />
-    </div>
+    </Container>
   )
 }
 

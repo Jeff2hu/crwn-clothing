@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 
-import FormInput from '../../item-components/FormInput';
-import Button from '../../item-components/Button';
+import FormInput from '../../../item-components/formInput/FormInput';
+import Button , { button_class_type } from '../../../item-components/button/Button';
+import { Container,Buttons,Alert } from './SignInForm.style';
 
-import { signInAuthWithEmailAndPassword,signInWithGooglePopup } from '../../../utils/Firebase';
+import { signInAuthWithEmailAndPassword,signInWithGooglePopup } from '../../../../utils/Firebase';
 
 const SignInForm = () => {
 
@@ -50,7 +51,7 @@ const SignInForm = () => {
   }
 
   return (
-    <form className='form-signIn' onSubmit={submitHandler}>
+    <Container onSubmit={submitHandler}>
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
       <FormInput 
@@ -74,9 +75,9 @@ const SignInForm = () => {
         }}
       />
 
-      <div className="form-signIn__btns">
+      <Buttons>
         <Button
-          buttonType={""}
+          buttonType={button_class_type.base}
           buttonOptions={{
             type:"submit"
           }}
@@ -84,7 +85,7 @@ const SignInForm = () => {
           sign in
         </Button>
         <Button
-          buttonType={"google"}
+          buttonType={button_class_type.google}
           buttonOptions={{
             type:"button",
             onClick:logGoogleUser
@@ -92,10 +93,10 @@ const SignInForm = () => {
         >
           sign in with google
         </Button>
-      </div>
+      </Buttons>
 
-      <p style={{marginTop:"50px",lineHeight:"30px",color:"red",fontWeight:"600"}}>You can just use the demo account<br/>Email : 123123@gmail.com<br/>Password : 123123</p>
-    </form>
+      <Alert>You can just use the demo account<br/>Email : 123123@gmail.com<br/>Password : 123123</Alert>
+    </Container>
   )
 }
 

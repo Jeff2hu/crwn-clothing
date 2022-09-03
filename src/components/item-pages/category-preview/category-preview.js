@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'; 
+import { Container,Title,Preview,FooterTitle } from './category-preview.style';
 import Product from '../product/Product'
+
 
 const CategoryPreview = ({title,products}) => {
 
@@ -15,27 +16,21 @@ const CategoryPreview = ({title,products}) => {
   }
 
   return (
-    <div className='category-preview-container'>
-      <Link 
-        className='category-preview-container-title'
-        to={`${title}`}
-      >
+    <Container>
+      <Title to={`${title}`}>
         {newTitle.toUpperCase()}
-      </Link>
-      <div className='category-preview-container-preview'>
+      </Title>
+      <Preview>
         {
           products
             .filter((item,index)=>index<4)
             .map((product)=><Product key={product.name} product={product}/>)
         }
-      </div>
-      <Link
-        className='category-preview-container-footerTitle'
-        to={`${title}`}
-      >
+      </Preview>
+      <FooterTitle  to={`${title}`}>
         more...
-      </Link>
-    </div>
+      </FooterTitle>
+    </Container>
   )
 }
 

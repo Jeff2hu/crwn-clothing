@@ -1,5 +1,6 @@
 import React from 'react';
-import Category from '../components/item-pages/category/Category';
+import Category from '../../components/item-pages/category/Category';
+import { Container } from './Home.style';
 
 const category = [
   {
@@ -29,14 +30,14 @@ const category = [
   },
 ]
 
-const Categories = () => {
+const Home = () => {
   return (
-    <div className='categories'>
+    <Container>
     {category.map((category)=>{
       return <Category key={category.id} category={category}/>
     })}
-  </div>
+  </Container>
   );
 }
 
-export default Categories
+export default Home

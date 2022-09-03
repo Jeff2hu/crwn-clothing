@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Container,BackgroundImage,Body } from './Category.style';
 
 const Category = ({category}) => {
+
   let { title , imageUrl } = category;
   let newTitle = ""
   if(title==="Womens"){
@@ -13,19 +14,13 @@ const Category = ({category}) => {
   }
 
   return (
-    <Link 
-      className='category-container'
-      to={`shop/${title.toLowerCase()}`}
-    >
-      <div 
-        className="category-image" 
-        style={{backgroundImage:`url(${imageUrl})`}}
-        />
-      <div className="category-body">
+    <Container to={`shop/${title.toLowerCase()}`}>
+      <BackgroundImage ImageUrl={imageUrl}/>
+      <Body>
         <h2>{newTitle}</h2>
         <p>Shop Now!</p>
-      </div>
-    </Link>
+      </Body>
+    </Container>
   )
 }
 

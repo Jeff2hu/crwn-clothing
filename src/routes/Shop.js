@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes,Route } from "react-router-dom";
 
 import CategoriesPreview from './Categories-preview';
-import Shop_Category from './Shop-Category';
+import Shop_Category from './shop-category/Shop-Category';
 
 
 const Shop = () => {

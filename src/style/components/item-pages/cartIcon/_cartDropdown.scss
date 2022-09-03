@@ -1,28 +1,28 @@
-.cartDropdown{
-  width: 280px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 10px 10px;
-  border: 1px solid black;
-  background-color: white;
-  @include position-absolute(90px,85%,-50%,0);
-  z-index: 5;
+// .cartDropdown{
+//   width: 280px;
+//   height: 340px;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 20px 10px 10px;
+//   border: 1px solid black;
+//   background-color: white;
+//   @include position-absolute(90px,85%,-50%,0);
+//   z-index: 5;
 
-  .empty-message {
-    font-size: 18px;
-    margin: 50% auto;
-  }
+//   .empty-message {
+//     font-size: 18px;
+//     margin: 50% auto;
+//   }
 
-  .cartDropdown-items {
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-  }
+//   .cartDropdown-items {
+    // height: 240px;
+    // display: flex;
+    // flex-direction: column;
+    // overflow-y: auto;
+//   }
 
-  button {
-    margin-top: 15px;
-    font-size: 12px;
-  }
-}
+//   button {
+//     margin-top: 15px;
+//     font-size: 12px;
+//   }
+// }

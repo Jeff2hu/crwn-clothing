@@ -1,7 +1,10 @@
 import React,{ useContext,useState,useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom';
-import Product from '../components/item-pages/product/Product';
-import { CategoryContext } from '../contexts/shop/CategoryContext';
+import Product from '../../components/item-pages/product/Product';
+
+import { Container,Title } from './Shop-Category.style';
+import { CategoryContext } from '../../contexts/shop/CategoryContext';
+
 
 const Shop_Category = () => {
   
@@ -24,8 +27,8 @@ const Shop_Category = () => {
 
   return (
     <Fragment>
-      <h2 style={{fontSize:"36px",textAlign:"center"}}>{newTitle.toUpperCase()}</h2>
-      <div className='shop-category-container'>
+      <Title>{newTitle.toUpperCase()}</Title>
+      <Container>
         {
           products && products.map((product)=>{
             return(
@@ -33,7 +36,7 @@ const Shop_Category = () => {
             )
           })
         }
-      </div>
+      </Container>
     </Fragment>
 
   )

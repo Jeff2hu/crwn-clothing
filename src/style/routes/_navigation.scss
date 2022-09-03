@@ -1,32 +1,32 @@
-.navigation{
-  height: 70px;
-  width: 100%;
-  @include d-flex(space-between);
-  margin-bottom: 25px;
-  &-logo{
-    height: 100%;
-    width: 70px;
-    padding: 25px;
-  }
-  &-links{
-    width: 50%;
-    height: 100%;
-    @include d-flex(flex-end);
-    &__link{
-      margin: 10px;
-      padding: 10px;
-      color: black;
-      transition: all .2s ease-in;
-      cursor: pointer;
-      &:hover{
-        background-color: #333;
-        color:white;
-        border-radius: 30px;
-      }
-      &:hover:nth-child(5){
-        color:black;
-        background-color: #ccc;
-      }
-    }
-  }
-}
+// .navigation{
+//   height: 70px;
+//   width: 100%;
+//   @include d-flex(space-between);
+//   margin-bottom: 25px;
+//   &-logo{
+//     height: 100%;
+//     width: 70px;
+//     padding: 25px;
+//   }
+//   &-links{
+//     width: 50%;
+//     height: 100%;
+//     @include d-flex(flex-end);
+//     &__link{
+//       margin: 10px;
+//       padding: 10px;
+//       color: black;
+//       transition: all .2s ease-in;
+//       cursor: pointer;
+//       &:hover{
+//         background-color: #333;
+//         color:white;
+//         border-radius: 30px;
+//       }
+//       &:hover:nth-child(5){
+//         color:black;
+//         background-color: #ccc;
+//       }
+//     }
+//   }
+// }
