@@ -82,7 +82,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   row-gap: 50px;
   margin: 30px auto;
 }
@@ -91,7 +91,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 50px;
   margin-top: 50px;
 }
