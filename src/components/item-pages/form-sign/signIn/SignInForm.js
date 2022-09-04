@@ -29,6 +29,9 @@ const SignInForm = () => {
   const logGoogleUser = async() => {
     await signInWithGooglePopup();
     alert("Welcome !!!");
+    setTimeout(() => {
+      navigate("/")
+    }, 1000); 
   }
 
   const submitHandler = async(e) => {
@@ -38,7 +41,9 @@ const SignInForm = () => {
       await signInAuthWithEmailAndPassword(email,password);
       alert("Welcome !!!");
       setSignInInput(initSignIn)
-      navigate("/crwn-clothing")
+      setTimeout(() => {
+        navigate("/")
+      }, 1000); 
     }catch(error){
       switch(error.code){
         case "auth/wrong-password" :
