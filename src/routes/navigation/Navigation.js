@@ -19,28 +19,28 @@ const Navigation = () => {
   return (
     <Fragment>
       <Container>
-        <Logo to='/'>
+        <Logo to='/crwn-clothing'>
           <CrwnLogo/>
         </Logo>
         <NavLinks>
-          <NavLink to='/shop'>
+          <NavLink to='/crwn-clothing/shop'>
             <div>Shop</div>
           </NavLink>
-          <NavLink to='/checkout'>
+          <NavLink to='/crwn-clothing/checkout'>
             <span>Checkout</span>
           </NavLink>
           {currentUser 
             ?(<Fragment>
-                <NavLink to='/profile'>
+                <NavLink to='/crwn-clothing/profile'>
                   <span>Profile</span>
                 </NavLink>
-                <NavLink to='/auth' onClick={signOutAuth}>
+                <NavLink to='/crwn-clothing/auth' onClick={signOutAuth}>
                   <span>SignOut</span>
                 </NavLink>
               </Fragment>
             ) 
             :(<Fragment>
-                <NavLink to='/auth'>
+                <NavLink to='/crwn-clothing/auth'>
                   <span>SignIn</span>
                 </NavLink>
               </Fragment>

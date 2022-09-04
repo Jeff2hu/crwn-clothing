@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import FormInput from '../../../item-components/formInput/FormInput';
 import Button , { button_class_type } from '../../../item-components/button/Button';
@@ -12,7 +13,8 @@ const SignInForm = () => {
     email:"",
     password:""
   }
-
+  
+  const navigate = useNavigate()
   const [signInInput,setSignInInput] = useState(initSignIn)
   const { email,password } = signInInput
 
@@ -36,6 +38,7 @@ const SignInForm = () => {
       await signInAuthWithEmailAndPassword(email,password);
       alert("Welcome !!!");
       setSignInInput(initSignIn)
+      navigate("/crwn-clothing")
     }catch(error){
       switch(error.code){
         case "auth/wrong-password" :
