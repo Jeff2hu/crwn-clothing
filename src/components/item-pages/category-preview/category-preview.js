@@ -5,7 +5,6 @@ import Product from '../product/Product'
 
 const CategoryPreview = ({title,products}) => {
 
-  console.log(title)
   let newTitle = ""
   if(title==="womens"){
     newTitle = "women"

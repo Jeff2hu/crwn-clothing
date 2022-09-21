@@ -1,15 +1,17 @@
-import React,{ useContext,useState,useEffect, Fragment } from 'react'
+import React,{ useState,useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom';
 import Product from '../../components/item-pages/product/Product';
 
 import { Container,Title } from './Shop-Category.style';
-import { CategoryContext } from '../../contexts/shop/CategoryContext';
+
+import { categories_select } from '../../store/category/category.selector';
+import { useSelector } from 'react-redux';
 
 
 const Shop_Category = () => {
   
+  const categoriesMap = useSelector(categories_select)
   const { category } = useParams();
-  const { categoriesMap } = useContext(CategoryContext);
   const [ products,setProducts ] = useState();
   
   let newTitle = ""
@@ -18,7 +20,7 @@ const Shop_Category = () => {
   }else if(category==="mens"){
     newTitle = "men"
   }else{
-    newTitle=category
+    newTitle = category
   }
 
   useEffect(()=>{

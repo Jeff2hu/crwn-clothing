@@ -14,7 +14,7 @@ const Category = ({category}) => {
   }
 
   return (
-    <Container to={`shop/${title.toLowerCase()}`}>
+    <Container to={`shop/${title.toUpperCase()}`}>
       <BackgroundImage ImageUrl={imageUrl}/>
       <Body>
         <h2>{newTitle}</h2>
